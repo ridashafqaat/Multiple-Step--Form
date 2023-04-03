@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="style.css">
+<title>Lodin Form</title>
+</head>
+<body>
+    <div class="container">
+        <form id="form1">
+            <h3> CREATE ACCOUNT </h3> 
+            <div class="input-control">
+                <label for="email">Email</label>
+                <input type="text"  placeholder="Enter Email" required="required">
+                <label for="password">Password </label>
+                <input type="password" placeholder="Enter Password" required="required"> 
+                <label for="conform password">Conform Password</label>
+                <input type="password" placeholder="Conform Password" required="required">
+            </div>
+                <div class="btn-box">
+                     <button type="button" id="next1">Next</button>
+                </div>      
+        </form> 
+        <form id="form2">
+            <h3> PERSONAL DETAILS</h3>    
+            <div class="input-control">
+                <label for="first name">First Name</label>
+                <input type="text" placeholder="Enter First Name" required="required">
+                <label for="last name">Last Name</label>
+                <input type="text" placeholder= "Enter Last Name" required="required">
+                <label for="social link">Social Link</label>
+                <input type="text" placeholder="Enter GitHub/LinkedIn profile link" required="required">
+            </div>
+          <div class="btn-box">
+            <button type="button" id="back1">Back</button>
+            <button type="button" id="next2">Next</button>
+          </div>
+        </form>
+        <form id="form3">
+            <h3 class="h3"> YOUR REVIEW </h3>
+            would you visit us again?
+            <br />
+            <label>
+                Yes
+            </label>    
+                <input type="radio" name="rating" value="yes">
+            <label>
+                 No
+            </label>     
+                <input type="radio" name="rating" value="no">
+            <label>
+                 Maybe
+            </label>     
+                <input type="radio" name="rating" value="maybe">
+            <p>
+                <label for="comments">
+                    Your Review
+                <br>
+                <textarea rows="2" cols="20"id="comments"></textarea>
+                </label>
+            </p>
+
+            <div class="btn-box">
+                <button type="button" id="back2">Back</button>
+                <button type="submit" >Submit</button>
+            </div> 
+        </form>
+
+        <div class="step-row">
+            <div id="progress"></div>
+            
+            <div class="step-col"><small>Step 1</small></div>
+            <div class="step-col"><small>Step 2</small></div>
+            <div class="step-col"><small>Step 3</small></div>
+        </div>
+    </div>    
+        <script>
+         var form1=document.getElementById('form1');
+         var form2=document.getElementById('form2');
+         var form3=document.getElementById('form3');
+
+         var next1=document.getElementById('next1');
+         var next2=document.getElementById('next2');
+
+         var back1=document.getElementById('back1');
+         var back2=document.getElementById('back2');
+             
+         var progress=document.getElementById('progress');
+
+         next1.onclick = function()
+           {
+            form1.style.left="-450px";
+             form2.style.left="40px";
+             progress.style.width="240px";
+           }
+         back1.onclick = function()
+         {
+             form1.style.left="40px";
+             form2.style.left="450px";
+             progress.style.width="120px";
+         }
+         next2.onclick=function()
+         {
+            form2.style.left="-450px";
+            form3.style.left="40px";
+            progress.style.width="360px";
+         }
+         back2.onclick=function()
+         {
+             form2.style.left="40px";
+             form3.style.left="450px";
+             progress.style.width="240px";
+         }
+        </script>    
+    </body>
+ </html> 
