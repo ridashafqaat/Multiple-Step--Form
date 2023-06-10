@@ -1,2 +1,2 @@
 # Multiple-Step--Form
-This is a html and css multiple step form 
+This is a multiple step form .
